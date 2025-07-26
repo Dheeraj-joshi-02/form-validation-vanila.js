@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Styled Form</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="form-container">
-      <form id="form">
-        <h2>Create Account</h2>
 
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Enter your name"
-            required
-          />
-          <small class="name-error error"
-            >Username must start with a letter and be at least 3
-            characters.</small
-          >
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styled Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-          />
-          <small class="email-error error"
-            >Please enter a valid email address.</small
-          >
-        </div>
+<body>
+  <div class="form-container">
+    <form id="form">
+      <h2>Create Account</h2>
 
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Enter your password"
-            required
-          />
-          <small class="error password-error"
-            >Password must be 8+ chars, with upper, lower, number, symbol</small
-          >
-        </div>
+      <div class="form-group">
+        <label for="name">User Name</label>
+        <input type="text" name="name" id="name" required />
+        <small class="name-error error">
+          3–20 characters, start with a letter, use letters, numbers, or _ only.
+        </small>
+      </div>
 
-        <input type="submit" value="Submit" />
-      </form>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+        <small class="email-error error">Please enter a valid email address.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+        <small class="error password-error">Password must be 8+ chars, with upper, lower, number, symbol</small>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Confirm Password</label>
+        <input type="password" name="confirm Password" id="confirmPassword" required />
+        <small class="error confirm-password-error">Passward not mathing with privious passward</small>
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+
+    <div id="message">
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

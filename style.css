@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap");
+
 /* Reset default spacing and box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: poppins;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -12,7 +14,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 /* Container styling */
@@ -30,9 +33,10 @@ form h2 {
   text-align: center;
   margin-bottom: 25px;
   color: #333;
+  font-size: 24px;
 }
 
-/* Group each field with label + input + small */
+/* Group each field */
 .form-group {
   margin-bottom: 18px;
 }
@@ -42,7 +46,9 @@ label {
   display: block;
   margin-bottom: 3px;
   font-weight: 600;
-  color: #3f3e3e;
+  font-size: 13px;
+  color: #575656;
+  padding-left: 15px;
 }
 
 /* Input styling */
@@ -52,7 +58,7 @@ input[type="password"] {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 15px;
   transition: border-color 0.3s ease;
 }
@@ -68,36 +74,31 @@ input[type="password"]:focus {
   color: rgb(134, 132, 132);
 }
 
-/* Small tag for helper/error text */
+/* Error and Message */
 .error {
   color: red;
   font-size: 13px;
   display: none;
   margin-top: 5px;
+  text-align: center;
 }
 
-input {
-  border: 1px solid #ccc;
-  transition: 0.3s;
+#message {
+  color: green;
+  font-size: 15px;
+  margin-top: 8px;
+  text-align: center;
 }
 
-input.valid {
-  border-color: green;
-}
-
-input.invalid {
-  border-color: red;
-}
-
-/* Submit button styling */
+/* Submit Button */
 input[type="submit"] {
   width: 100%;
   background-color: #007bff;
   color: white;
   padding: 12px;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -106,12 +107,41 @@ input[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-@media (max-width: 480px) {
+/* === Responsive Styles === */
+@media (max-width: 768px) {
   .form-container {
-    padding: 20px;
+    padding: 25px 30px;
   }
 
   form h2 {
     font-size: 22px;
+  }
+
+  input[type="submit"] {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  form h2 {
+    font-size: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  input[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
   }
 }
